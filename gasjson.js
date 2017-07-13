@@ -37,11 +37,11 @@ partir de una hoja de calculo de Google Drive.
       columnasDeseadas: ['*'],
       columnaNoDeseadas: ['camelCase1', 'camelCase2', 'camelCase2'...]
     }  
-- funcionDeFiltrado: o null (si no se quiere filtrar) o una funcion que devuelve true para los elementos
+- funcionDeFiltrado: una funcion que devuelve true para los elementos
 que se deseen mostrar o false para los que no. Algo del tipo:
-                       function(elemento) {
-                         return elemento.id == "AA22";
-                       }
+                       function(elemento) { return elemento.id == "AA22";}
+                       o del tipo si no se quiere que haya filtrado
+                       function(elemento) { return true;}
 - nombreConsulta: especifica un nombre para la consulta con el fin de guardarla en la cache. Si es "" entonces no
                   se guarda la consulta en la cache.
                   
